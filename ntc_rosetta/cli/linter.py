@@ -1,7 +1,7 @@
 import json
 import pathlib
 import sys
-from typing import Tuple
+from typing import Tuple, Optional, Set
 
 import click
 
@@ -37,7 +37,7 @@ Errors/Warning message codes:
 def lint(
     ctx: click.Context,
     filepaths: Tuple[str],
-    ignore: Tuple[str],
+    ignore: Optional[Set[str]],
     to_json: bool,
     model: str,
 ) -> None:
